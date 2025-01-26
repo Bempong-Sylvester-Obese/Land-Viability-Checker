@@ -3,8 +3,6 @@
 ## 📌 Overview
 The **Obese Land Viability Checker** is an AI-powered tool designed to assess land suitability for agricultural use. By analyzing soil quality, climate conditions, and water availability, it provides valuable insights to help farmers and agribusinesses make informed decisions.
 
----
-
 ## 🚀 Features
 - **Soil Quality Analysis**: Evaluates key soil nutrients and fertility levels.
 - **Climate Suitability**: Assesses temperature, rainfall, and humidity for optimal crop growth.
@@ -45,8 +43,6 @@ The **Obese Land Viability Checker** is an AI-powered tool designed to assess la
 - [ ] Develop a web-based dashboard for visualization.
 - [ ] Mobile app integration for on-the-go analysis.
 - [ ] Expand dataset for increased accuracy.
-
----
 
 ## 🤝 Contributing
 Contributions are welcome! Feel free to fork the repository and submit a pull request.

@@ -3,21 +3,21 @@ class ObeseViabilityChecker:
         self.soil_ph = soil_ph
         self.water_availability = water_availability
         self.sunlight_hours = sunlight_hours
-
+# Checking soil pH
     def check_soil_ph(self):
         # Viable soil pH level is between 6.0 and 7.5
         if 6.0 <= self.soil_ph <= 7.5:
             return True
         else:
             return False
-
+# checking water availability
     def check_water_availability(self):
         # Viable water availability is at least 500mm per year
         if self.water_availability >= 500:
             return True
         else:
             return False
-
+# Sunlight Intensity and Duration
     def check_sunlight_hours(self):
         # Viable sunlight exposure is at least 6 hours per day
         if self.sunlight_hours >= 6:

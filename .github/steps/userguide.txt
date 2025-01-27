@@ -1,0 +1,55 @@
+**Obese Farms Viability Checker - User Guide**
+
+### **Step 1: Install Required Dependencies**
+Ensure you have Python installed on your system. Install the necessary libraries by running:
+```sh
+pip install pandas numpy geopandas folium
+```
+
+### **Step 2: Download and Setup the Application**
+1. Clone the repository or download the script to your local machine:
+   ```sh
+   git clone https://github.com/your-repo/obese-farms-viability-checker.git
+   cd obese-farms-viability-checker
+   ```
+2. If provided, extract any required dataset into the `data/` folder.
+
+### **Step 3: Run the Application**
+Execute the main script by running:
+```sh
+python main.py
+```
+
+### **Step 4: Input Land Coordinates**
+1. The program will prompt you to enter the latitude and longitude of the land.
+2. You can enter these manually or upload a CSV file containing land coordinates.
+
+### **Step 5: Analyze the Viability**
+1. The program will assess factors such as:
+   - Soil type
+   - Rainfall levels
+   - Proximity to water sources
+   - Terrain suitability
+2. It will generate a viability score based on these factors.
+
+### **Step 6: View and Interpret Results**
+1. The output will display a viability score from 0 to 100.
+2. A map visualization will be generated showing the land’s suitability.
+3. The tool may suggest recommended crops based on the analysis.
+
+### **Step 7: Export and Save Results**
+1. The results can be saved as a CSV or JSON file for further analysis.
+2. If applicable, results may be stored in a database for historical reference.
+
+### **Step 8: Exit the Program**
+After analysis, you can exit the program by typing `exit` or closing the terminal.
+
+### **Troubleshooting**
+- If you encounter missing dependencies, reinstall them using `pip install -r requirements.txt`.
+- Ensure that the dataset files are correctly formatted and placed in the `data/` folder.
+- For errors, refer to the log file generated in the `logs/` directory.
+
+---
+**Developer Contact:** Sylvesterobese6665@gmail.com
+
+

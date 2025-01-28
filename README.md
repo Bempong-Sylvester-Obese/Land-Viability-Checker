@@ -22,7 +22,7 @@ The **Obese Land Viability Checker** is an AI-powered tool designed to assess la
 ## 📖 Installation & Usage
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-username/obese-land-viability-checker.git
+   git clone https://github.com/Sylvester-Bempong/obese-land-viability-checker.git
    ```
 2. Navigate to the project folder:
    ```sh

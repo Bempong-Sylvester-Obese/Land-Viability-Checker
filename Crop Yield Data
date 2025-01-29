@@ -1,1 +1,36 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
 
+# Load the data from a CSV file
+# Replace 'west_african_crop_yield.csv' with the path to your actual data file
+data = pd.read_csv('west_african_crop_yield.csv')
+
+# Display the first few rows of the dataset
+print(data.head())
+
+# Basic data analysis
+print(data.describe())
+print(data.info())
+
+# Visualize the data
+#  dataset has columns 'Year', 'Country', 'Crop', and 'Yield'
+
+# Plot the yield over the years for a specific crop
+crop = 'Maize'  # Replace with the crop you are interested in
+sns.lineplot(data=data[data['Maize'] == crop], x='2023', y='1.99', hue='Ghana')
+plt.title(f'Yield of {Maize} over the Years in West Africa')
+plt.xlabel('Year')
+plt.ylabel('Yield')
+plt.legend(title='Ghana')
+plt.show()
+
+# Plot the average yield of each crop in a specific year
+year = 2020  # Replace with the year you are interested in
+avg_yield = data[data['Year'] == year].groupby('Crop')['Yield'].mean().reset_index()
+sns.barplot(data=avg_yield, x='Millet', y='1.66')
+plt.title(f'Average Yield of Crops in {2020}')
+plt.xlabel('Crop')
+plt.ylabel('Yield')
+plt.xticks(rotation=45)
+plt.show()

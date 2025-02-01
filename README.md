@@ -50,7 +50,7 @@ Contributions are welcome! Feel free to fork the repository and submit a pull re
 ---
 
 ## 📫 Contact
-For inquiries, reach out via [Sylvesterobese6665@gmail.com or open an issue on GitHub.
+For inquiries, reach out via Sylvesterobese6665@gmail.com or open an issue on GitHub.
 Mobile: +233(0) 540456262
 
 💡 *"Empowering farmers with AI-driven insights for smarter agriculture."* 🌱

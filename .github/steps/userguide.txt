@@ -49,7 +49,4 @@ After analysis, you can exit the program by typing `exit` or closing the termina
 - Ensure that the dataset files are correctly formatted and placed in the `data/` folder.
 - For errors, refer to the log file generated in the `logs/` directory.
 
----
-**Developer Contact:** Sylvesterobese6665@gmail.com
-
 

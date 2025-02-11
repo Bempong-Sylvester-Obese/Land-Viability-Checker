@@ -26,7 +26,7 @@ plt.legend(title='Ghana')
 plt.show()
 
 # Plot the average yield of each crop in a specific year
-year = 2020  # Replace with the year you are interested in
+year = 2020  # Replace with the year interested in
 avg_yield = data[data['Year'] == year].groupby('Crop')['Yield'].mean().reset_index()
 sns.barplot(data=avg_yield, x='Millet', y='1.66')
 plt.title(f'Average Yield of Crops in {2020}')

@@ -1,33 +1,52 @@
 import pandas as pd
 import numpy as np
-import tensorflow as tf
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 
-# Define paths to the datasets
-soil_images_path = 'path_to_soil_images'
-weather_data_path = 'path_to_weather_data.csv'
-crop_yield_data_path = 'path_to_crop_yield_data.csv'
-soil_nutrient_data_path = 'path_to_soil_nutrient_data.csv'
+def load_data(file_path):
+    """Load dataset from CSV file"""
+    df = pd.read_csv(file_path)
+    return df
 
-# Load weather, crop yield, and soil nutrient data
-weather_data = pd.read_csv(weather_data_path)
-crop_yield_data = pd.read_csv(crop_yield_data_path)
-soil_nutrient_data = pd.read_csv(soil_nutrient_data_path)
+def clean_data(df):
+    """Clean dataset by handling missing values and duplicates"""
+    df.drop_duplicates(inplace=True)
+    df.fillna(df.mean(numeric_only=True), inplace=True)  # Fill missing numeric values with mean
+    df.fillna("Unknown", inplace=True)  # Fill missing categorical values with 'Unknown'
+    return df
 
-# Merge datasets on common keys (e.g., location, date)
-merged_data = pd.merge(weather_data, crop_yield_data, on=['location', 'date'])
-merged_data = pd.merge(merged_data, soil_nutrient_data, on=['location', 'date'])
+def encode_features(df, categorical_columns):
+    """Convert categorical features to numerical using Label Encoding"""
+    label_encoders = {}
+    for col in categorical_columns:
+        le = LabelEncoder()
+        df[col] = le.fit_transform(df[col])
+        label_encoders[col] = le
+    return df, label_encoders
 
-# Preprocess numerical data
-scaler = StandardScaler()
-numerical_features = ['temperature', 'rainfall', 'nutrient_x', 'nutrient_y']
-merged_data[numerical_features] = scaler.fit_transform(merged_data[numerical_features])
+def scale_features(df, numerical_columns):
+    """Normalize numerical features using StandardScaler"""
+    scaler = StandardScaler()
+    df[numerical_columns] = scaler.fit_transform(df[numerical_columns])
+    return df, scaler
 
-# Encode categorical features
-label_encoder = LabelEncoder()
-merged_data['location'] = label_encoder.fit_transform(merged_data['location'])
+def split_data(df, target_column, test_size=0.2):
+    """Split dataset into training and testing sets"""
+    X = df.drop(columns=[target_column])
+    y = df[target_column]
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, random_state=42)
+    return X_train, X_test, y_train, y_test
 
-# Split data into training and validation sets
-train_data, val_data = train_test_split(merged_data, test_size=0.2, random_state=42)
+# Example usage
+if __name__ == "__main__":
+    file_path = "obese_data.csv"  # Replace with actual dataset path
+    df = load_data(file_path)
+    df = clean_data(df)
+    categorical_columns = ["food_type", "activity_level"]  # Example categorical columns
+    numerical_columns = ["calories", "protein", "fat"]  # Example numerical columns
+    df, encoders = encode_features(df, categorical_columns)
+    df, scaler = scale_features(df, numerical_columns)
+    X_train, X_test, y_train, y_test = split_data(df, target_column="obesity_level")
+    
+    print("Data preprocessing completed successfully!")
+

@@ -1,7 +1,7 @@
-# Obese Land Viability Checker 🌾
+# Land Viability Checker 🌾
 
 ## 📌 Overview
-The **Obese Land Viability Checker** is an AI-powered tool designed to assess land suitability for agricultural use. By analyzing soil quality, climate conditions, and water availability, it provides valuable insights to help farmers and agribusinesses make informed decisions.
+The **Land Viability Checker** is an AI-powered tool designed to assess land suitability for agricultural use. By analyzing soil quality, climate conditions, and water availability, it provides valuable insights to help farmers and agribusinesses make informed decisions.
 
 ## 🚀 Features
 - **Soil Quality Analysis**: Evaluates key soil nutrients and fertility levels.
@@ -22,7 +22,7 @@ The **Obese Land Viability Checker** is an AI-powered tool designed to assess la
 ## 📖 Installation & Usage
 1. Clone the repository:
    ```sh
-   git clone https://github.com/Sylvester-Bempong/obese-land-viability-checker.git
+   git clone https://github.com/Sylvester-Bempong/land-viability-checker.git
    ```
 2. Navigate to the project folder:
    ```sh

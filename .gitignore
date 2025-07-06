@@ -1,11 +1,9 @@
 # Ignore Python bytecode files
-__pycache__/
-*.py[cod]
+
 
 # Ignore environment files
-venv/
-env/
-*.env
+venv_new/
+activate_env.sh
 
 # Ignore log files
 *.log
@@ -18,19 +16,12 @@ logs/
 
 # Ignore IDE/editor settings
 .vscode/
-.idea/
-*.swp
 
 # Ignore compiled machine learning models
-models/
-*.h5
-*.pkl
+
 
 # Ignore dependencies
-*.egg-info/
-*.dist-info/
 
 # Ignore OS-generated files
-.DS_Store
-Thumbs.db
+
 

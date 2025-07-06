@@ -30,7 +30,7 @@ Obese Farms Viability Checker is a Python-based tool designed to assess the suit
 ### 📌 How to Use:
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-username/obese-viability-checker.git
+   git clone https://github.com/your-username/obese-farms-viability-checker.git
    ```
 2. Install dependencies:
    ```sh

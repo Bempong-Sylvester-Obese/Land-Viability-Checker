@@ -1,6 +1,3 @@
-# Ignore Python bytecode files
-
-
 # Ignore environment files
 venv_new/
 activate_env.sh
@@ -17,11 +14,5 @@ logs/
 # Ignore IDE/editor settings
 .vscode/
 
-# Ignore compiled machine learning models
-
-
-# Ignore dependencies
-
-# Ignore OS-generated files
 
 

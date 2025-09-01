@@ -22,20 +22,17 @@ The **Land Viability Checker** is an AI-powered tool designed to assess land sui
 ## 📖 Installation & Usage
 1. Clone the repository:
    ```sh
-   git clone https://github.com/Sylvester-Bempong/land-viability-checker.git
+   git clone https://github.com/Bempong-Sylvester-Obese/land-viability-checker.git
    ```
 2. Navigate to the project folder:
    ```sh
-   cd obese-land-viability-checker
+   cd Land-Viability-Checker
    ```
 3. Install dependencies:
    ```sh
    pip install -r requirements.txt
    ```
-4. Run the script:
-   ```sh
-   python main.py
-   ```
+
 
 ---
 

@@ -5,7 +5,7 @@ scikit-learn>=1.3.0
 
 # Machine learning and AI (using alternatives compatible with Python 3.13)
 # Note: TensorFlow is not yet compatible with Python 3.13
-# Using scikit-learn for ML tasks instead
+# Use scikit-learn for ML tasks instead
 # For deep learning, consider using PyTorch or wait for TensorFlow 3.13 support
 
 # Data visualization
